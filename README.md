@@ -1,2 +1,4 @@
-# Estudos-GRPC
-Exemplos e explicações sobre GRPC
+# Estudos gRPC
+Exemplos e explicações sobre gRPC
+
+<img width='200px' src='https://grpc.io/img/logos/grpc-icon-color.png'>
