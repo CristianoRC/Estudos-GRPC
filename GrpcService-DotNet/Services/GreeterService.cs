@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
@@ -16,12 +13,19 @@ namespace GrpcService_DotNet
             _logger = logger;
         }
 
-        public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
+        public override async Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
         {
-            return Task.FromResult(new HelloReply
+            //context: parecido com o HttpContext
+            return new HelloReply
             {
+                Name = "Response",
                 Message = "Hello " + request.Name
-            });
+            };
+        }
+
+        public override Task<Bye> SayBye(Empty request, ServerCallContext context)
+        {
+            return Task.FromResult(new Bye() {Message = "Vlw Flows"});
         }
     }
 }
