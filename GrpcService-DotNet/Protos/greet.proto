@@ -2,20 +2,18 @@ syntax = "proto3"; // versão do GRPC
 
 option csharp_namespace = "GrpcService_DotNet"; // namespace para mapear as classes
 
+import "google/protobuf/empty.proto";
 package greet;
 
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
-  rpc SayBye (Empty) returns (Bye);
+  rpc SayBye (google.protobuf.Empty) returns (Bye);
 }
 
 message HelloRequest {
   string name = 1;
 }
 
-message Empty {
-  
-}
 
 message Bye{
   string message = 1;
