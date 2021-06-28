@@ -54,6 +54,20 @@ Exemplo retirado da docuemntação da Microsoft.
 
 ## Serviços
 
+Forma de definir quais as funções, parâmetros e retornos teremos no nosso contrato(.proto)
+
+
+```protobuf
+syntax = "proto3"; // versão do GRPC
+
+option csharp_namespace = "GrpcHost"; // namespace para mapear as classes(opicional)
+
+package greet;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+```
 ---
 
 É um protocolo criado pelo Google para trafegar estruturas de dados de forma extensível e otimizada entre diferentes aplicações, sendo uma alternativa ao uso de serialização de dados em JSON, XML e similares. - [Lambda3](https://www.lambda3.com.br/2018/12/protobuf-uma-alternativa-a-serializacao-em-json-e-xml/)
