@@ -6,4 +6,4 @@ Exemplos e explicações sobre gRPC
 | Conteúdo      | Link        |
 | :----:        |    :----:   |  
 | Protobuf      | [link](./protobuf)    |
-| gRPC Cli      | [link](./protobuf-cli)    |
+| Protobuf Cli  | [link](./protobuf-cli)    |
